@@ -45,40 +45,40 @@ const valueProducts = [
 
 const NewArrivals = () => {
   return (
-    <section id="new-arrivals" className="bg-cream py-16 md:py-24">
+    <section id="new-arrivals" className="bg-cream py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
           {/* New Season Section */}
           <div>
-            <div className="mb-8">
-              <p className="text-gold text-sm tracking-widest mb-2">NEW ARRIVALS</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-purple-dark mb-4">
+            <div className="mb-6 md:mb-8">
+              <p className="text-gold text-xs md:text-sm tracking-widest mb-2 uppercase">NEW ARRIVALS</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-dark mb-4 leading-tight">
                 NEW SEASON,<br />NEW STORIES
               </h2>
-              <div className="flex gap-3">
-                <Button className="btn-gold rounded-full w-12 h-12 p-0" aria-label="Previous">
+              <div className="flex gap-2 md:gap-3">
+                <Button className="btn-gold rounded-full w-10 h-10 md:w-12 md:h-12 p-0 flex items-center justify-center" aria-label="Previous">
                   ←
                 </Button>
-                <Button className="btn-gold rounded-full w-12 h-12 p-0" aria-label="Next">
+                <Button className="btn-gold rounded-full w-10 h-10 md:w-12 md:h-12 p-0 flex items-center justify-center" aria-label="Next">
                   →
                 </Button>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {newProducts.map((product) => (
                 <div key={product.id} className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-lg mb-3 aspect-[3/4]">
+                  <div className="relative overflow-hidden rounded-lg mb-2 md:mb-3 aspect-[3/4] bg-gray-100">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-purple-dark text-sm font-medium mb-1 line-clamp-2">
+                  <h3 className="text-purple-dark text-xs md:text-sm font-medium mb-1 line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="text-purple-medium font-bold text-sm">{product.price}</p>
+                  <p className="text-purple-medium font-semibold text-xs md:text-sm">{product.price}</p>
                 </div>
               ))}
             </div>
@@ -86,36 +86,36 @@ const NewArrivals = () => {
 
           {/* Value Picks Section */}
           <div>
-            <div className="mb-8">
-              <p className="text-gold text-sm tracking-widest mb-2">VALUE PICKS</p>
-              <h2 className="text-3xl md:text-4xl font-bold text-purple-dark mb-1">
+            <div className="mb-6 md:mb-8">
+              <p className="text-gold text-xs md:text-sm tracking-widest mb-2 uppercase">VALUE PICKS</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-purple-dark mb-1 leading-tight">
                 STARTS AT
               </h2>
-              <p className="text-5xl font-bold text-red-600 mb-4">₹699</p>
-              <div className="flex gap-3">
-                <Button className="btn-gold rounded-full w-12 h-12 p-0" aria-label="Previous">
+              <p className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4" style={{ color: '#8B0000' }}>₹699</p>
+              <div className="flex gap-2 md:gap-3">
+                <Button className="btn-gold rounded-full w-10 h-10 md:w-12 md:h-12 p-0 flex items-center justify-center" aria-label="Previous">
                   ←
                 </Button>
-                <Button className="btn-gold rounded-full w-12 h-12 p-0" aria-label="Next">
+                <Button className="btn-gold rounded-full w-10 h-10 md:w-12 md:h-12 p-0 flex items-center justify-center" aria-label="Next">
                   →
                 </Button>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               {valueProducts.map((product) => (
                 <div key={product.id} className="group cursor-pointer">
-                  <div className="relative overflow-hidden rounded-lg mb-3 aspect-[3/4]">
+                  <div className="relative overflow-hidden rounded-lg mb-2 md:mb-3 aspect-[3/4] bg-gray-100">
                     <img
                       src={product.image}
                       alt={product.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
-                  <h3 className="text-purple-dark text-sm font-medium mb-1 line-clamp-2">
+                  <h3 className="text-purple-dark text-xs md:text-sm font-medium mb-1 line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="text-purple-medium font-bold text-sm">{product.price}</p>
+                  <p className="text-purple-medium font-semibold text-xs md:text-sm">{product.price}</p>
                 </div>
               ))}
             </div>
