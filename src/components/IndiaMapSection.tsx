@@ -9,12 +9,14 @@ interface Region {
 }
 
 const regions: Region[] = [
-  { name: "Patan Patola", state: "Gujarat", coordinates: { x: "25%", y: "35%" } },
-  { name: "Banarasi", state: "Uttar Pradesh", coordinates: { x: "65%", y: "28%" } },
-  { name: "Kanchipuram", state: "Tamil Nadu", coordinates: { x: "60%", y: "75%" } },
-  { name: "Chanderi", state: "Madhya Pradesh", coordinates: { x: "50%", y: "40%" } },
-  { name: "Pochampally", state: "Telangana", coordinates: { x: "58%", y: "55%" } },
-  { name: "Mysore Silk", state: "Karnataka", coordinates: { x: "50%", y: "65%" } },
+  { name: "Patan Patola", state: "Gujarat", coordinates: { x: "28%", y: "38%" } },
+  { name: "Banarasi", state: "Uttar Pradesh", coordinates: { x: "60%", y: "32%" } },
+  { name: "Kanchipuram", state: "Tamil Nadu", coordinates: { x: "58%", y: "80%" } },
+  { name: "Chanderi", state: "Madhya Pradesh", coordinates: { x: "52%", y: "42%" } },
+  { name: "Pochampally", state: "Telangana", coordinates: { x: "56%", y: "60%" } },
+  { name: "Mysore Silk", state: "Karnataka", coordinates: { x: "52%", y: "70%" } },
+  { name: "Assam Silk", state: "Assam", coordinates: { x: "78%", y: "35%" } },
+  { name: "Kashmiri", state: "Jammu & Kashmir", coordinates: { x: "48%", y: "18%" } },
 ];
 
 const IndiaMapSection = () => {
@@ -54,7 +56,7 @@ const IndiaMapSection = () => {
               {regions.map((region, index) => (
                 <div
                   key={index}
-                  className="absolute w-8 h-8 md:w-10 md:h-10 cursor-pointer group"
+                  className="absolute w-3 h-3 md:w-4 md:h-4 cursor-pointer group"
                   style={{ 
                     left: region.coordinates.x, 
                     top: region.coordinates.y,
@@ -63,8 +65,8 @@ const IndiaMapSection = () => {
                   onMouseEnter={() => setHoveredRegion(region)}
                   onMouseLeave={() => setHoveredRegion(null)}
                 >
-                  <div className="absolute inset-0 rounded-full bg-gold/20 group-hover:bg-gold/40 transition-all duration-300 animate-pulse" />
-                  <div className="absolute inset-0 rounded-full border-2 border-gold group-hover:scale-125 transition-transform duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gold group-hover:hidden transition-all duration-300" />
+                  <div className="absolute inset-0 rounded-full border-2 border-gold opacity-0 group-hover:opacity-100 group-hover:scale-[3] transition-all duration-300" style={{ backgroundColor: '#402039' }} />
                 </div>
               ))}
             </div>
