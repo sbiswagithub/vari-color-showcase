@@ -27,20 +27,20 @@ const LoomTaleSection = () => {
   ];
 
   return (
-    <section className="bg-purple-dark text-white py-16 md:py-24">
+    <section className="bg-purple-dark text-white py-16 md:py-24 animate-fade-in">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-5 gap-8 items-center">
           {/* Left - Loom image */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <img
               src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600"
               alt="Traditional loom weaving"
-              className="w-full h-[400px] object-cover rounded-lg"
+              className="w-full h-[400px] object-cover rounded-lg hover-scale transition-transform duration-500"
             />
           </div>
 
           {/* Right - Content and carousel */}
-          <div className="lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-8 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="border-t-2 border-gold pt-4">
               <p className="text-gold text-sm tracking-widest mb-2">FEATURED COLLECTION</p>
               <h2 className="text-3xl md:text-4xl font-bold">
@@ -54,12 +54,12 @@ const LoomTaleSection = () => {
                 {visibleCategories.map((category) => (
                   <div
                     key={category.id}
-                    className="relative group cursor-pointer overflow-hidden rounded-lg aspect-[3/4]"
+                    className="relative group cursor-pointer overflow-hidden rounded-lg aspect-[3/4] hover-scale"
                   >
                     <img
                       src={category.image}
                       alt={category.name}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       onError={(e) => {
                         const colors = ["#8B0000", "#FF1493", "#4B0082", "#DC143C"];
                         const colorIndex = category.id % colors.length;
@@ -91,7 +91,7 @@ const LoomTaleSection = () => {
               </button>
             </div>
 
-            <Button className="btn-gold px-8 py-6 text-base">
+            <Button className="btn-gold px-8 py-6 text-base hover-scale">
               View Heritage Collection
             </Button>
           </div>
