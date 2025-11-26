@@ -47,15 +47,15 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-cream">
-      {/* Decorative elements */}
-      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-20 md:w-32 opacity-30 z-10">
+    <section className="relative h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden bg-cream animate-fade-in">
+      {/* Decorative elements with pulse animation */}
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-20 md:w-32 opacity-30 z-10 animate-pulse" style={{ animationDuration: '3s' }}>
         <svg viewBox="0 0 100 200" className="fill-purple-dark/20">
           <path d="M50,20 Q30,50 50,80 T50,140 Q30,170 50,200" stroke="currentColor" fill="none" strokeWidth="2"/>
           <circle cx="50" cy="100" r="30" opacity="0.3"/>
         </svg>
       </div>
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-20 md:w-32 opacity-30 z-10">
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-20 md:w-32 opacity-30 z-10 animate-pulse" style={{ animationDuration: '4s' }}>
         <svg viewBox="0 0 100 200" className="fill-purple-dark/20">
           <path d="M50,20 Q70,50 50,80 T50,140 Q70,170 50,200" stroke="currentColor" fill="none" strokeWidth="2"/>
           <circle cx="50" cy="100" r="30" opacity="0.3"/>
@@ -66,7 +66,7 @@ const HeroCarousel = () => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
+          className={`absolute inset-0 transition-opacity duration-1000 animate-fade-in ${
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -81,14 +81,14 @@ const HeroCarousel = () => {
           />
           
           <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-            <div className="max-w-xl">
+            <div className="max-w-xl animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <p className="text-sm md:text-base tracking-[0.3em] text-purple-medium mb-4 font-light">
                 {slide.title}
               </p>
               <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-8">
                 {slide.subtitle}
               </h2>
-              <Button className="btn-purple px-8 py-6 text-base">
+              <Button className="btn-purple px-8 py-6 text-base hover-scale">
                 SHOP NOW
               </Button>
             </div>
@@ -99,14 +99,14 @@ const HeroCarousel = () => {
       {/* Navigation arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-2 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-2 rounded-full transition-all hover-scale"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-6 h-6 text-purple-dark" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-2 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white p-2 rounded-full transition-all hover-scale"
         aria-label="Next slide"
       >
         <ChevronRight className="w-6 h-6 text-purple-dark" />
