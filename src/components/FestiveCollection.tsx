@@ -33,9 +33,9 @@ const products = [
 
 const FestiveCollection = () => {
   return (
-    <section id="festive" className="bg-white py-16 md:py-24">
+    <section id="festive" className="bg-white py-16 md:py-24 animate-fade-in">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <p className="text-gold text-sm tracking-widest mb-2">FESTIVE COLLECTION</p>
           <h2 className="text-3xl md:text-4xl font-bold text-purple-dark mb-8">
             DRESS FOR THE OCCASION
@@ -43,13 +43,14 @@ const FestiveCollection = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {products.map((product, idx) => (
             <div
               key={product.id}
-              className="group cursor-pointer"
+              className="group cursor-pointer animate-fade-in hover-scale"
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
-              <div className="relative overflow-hidden rounded-lg mb-4 aspect-[3/4]">
-                <span className="absolute top-3 right-3 bg-gold text-purple-dark text-xs font-bold px-3 py-1 rounded-full z-10">
+              <div className="relative overflow-hidden rounded-lg mb-4 aspect-[3/4] shadow-md">
+                <span className="absolute top-3 right-3 bg-gold text-purple-dark text-xs font-bold px-3 py-1 rounded-full z-10 animate-fade-in">
                   {product.badge}
                 </span>
                 <img
@@ -66,7 +67,7 @@ const FestiveCollection = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="btn-gold px-8 py-6 text-base">
+          <Button className="btn-gold px-8 py-6 text-base hover-scale">
             View Festive Collection
           </Button>
         </div>
