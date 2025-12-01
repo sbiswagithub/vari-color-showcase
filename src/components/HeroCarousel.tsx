@@ -1,46 +1,43 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-
-import Hero1 from "@/assets/hero.svg?url";
-import Hero2 from "@/assets/hero.svg?url";
-import Hero3 from "@/assets/hero.svg?url";
+import HeroImage from "@/assets/hero.svg";
 
 const slides = [
   {
     id: 1,
     title: "VIBRANT COLOURS OF KOLKATA",
     subtitle: "VARICOLOR",
-    image: Hero1,
+    image: HeroImage,
   },
   {
     id: 2,
     title: "TRADITIONAL WEAVES",
     subtitle: "VARICOLOR",
-    image: Hero2,
+    image: HeroImage,
   },
   {
     id: 3,
     title: "FESTIVE COLLECTION",
     subtitle: "VARICOLOR",
-    image: Hero3,
+    image: HeroImage,
   },
   {
     id: 4,
     title: "FESTIVE COLLECTION",
     subtitle: "VARICOLOR",
-    image: Hero3,
+    image: HeroImage,
   },
   {
     id: 5,
     title: "FESTIVE COLLECTION",
     subtitle: "VARICOLOR",
-    image: Hero3,
+    image: HeroImage,
   },
   {
     id: 6,
     title: "FESTIVE COLLECTION",
     subtitle: "VARICOLOR",
-    image: Hero3,
+    image: HeroImage,
   },
 ];
 
