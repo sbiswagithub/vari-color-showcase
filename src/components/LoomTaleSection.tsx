@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Sarees1 from "@/assets/saree1.svg";
 
 const categories = [
-  { id: 1, name: "BANARASEE", image: "/src/assets/saree2.svg" },
-  { id: 2, name: "PAITHANI", image: "/src/assets/saree3.svg" },
-  { id: 3, name: "BANDHANI", image: "/src/assets/saree4.svg" },
-  { id: 4, name: "POCHAMPALLY", image: "/src/assets/saree4.svg" },
+  { id: 1, name: "BANARASEE", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600" },
+  { id: 2, name: "PAITHANI", image: "https://images.unsplash.com/photo-1583391265740-d6d8f45a17e7?w=400&h=600" },
+  { id: 3, name: "BANDHANI", image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400&h=600" },
+  { id: 4, name: "POCHAMPALLY", image: "https://images.unsplash.com/photo-1610030469266-3c3a0e0f7a2c?w=400&h=600" },
 ];
 
 const LoomTaleSection = () => {
@@ -45,12 +44,9 @@ const LoomTaleSection = () => {
         <div className="grid lg:grid-cols-5 gap-6 md:gap-8 lg:gap-4 items-center">
           <div className="lg:col-span-2 flex justify-center order-1 lg:order-none animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <img
-              src={Sarees1}
+              src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600"
               alt="Traditional loom weaving"
               className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] h-[360px] sm:h-[420px] md:h-[480px] lg:h-[540px] object-cover rounded-xl hover-scale transition-transform duration-500"
-              onError={(e) => {
-                e.currentTarget.src = "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=600";
-              }}
             />
           </div>
           <div className="lg:col-span-3 text-purple-dark order-2 lg:order-none animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -73,11 +69,6 @@ const LoomTaleSection = () => {
                       src={category.image}
                       alt={category.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                      onError={(e) => {
-                        const colors = ["#8B0000", "#FF1493", "#4B0082", "#DC143C"];
-                        const colorIndex = category.id % colors.length;
-                        e.currentTarget.src = `https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=300&fit=crop&color=${colors[colorIndex]}`;
-                      }}
                     />
                     <div className="absolute bottom-8 md:bottom-12 lg:bottom-16 left-8 md:left-12 lg:left-16">
                       <p className="text-white text-base md:text-lg font-medium">

@@ -6,19 +6,19 @@ const newProducts = [
     id: 1,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees14.svg",
+    image: "https://images.unsplash.com/photo-1583391265740-d6d8f45a17e7?w=400",
   },
   {
     id: 2,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees13.svg",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400",
   },
   {
     id: 3,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees12.svg",
+    image: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?w=400",
   },
 ];
 
@@ -27,19 +27,19 @@ const valueProducts = [
     id: 1,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees11.svg",
+    image: "https://images.unsplash.com/photo-1610030469266-3c3a0e0f7a2c?w=400",
   },
   {
     id: 2,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees10.svg",
+    image: "https://images.unsplash.com/photo-1583391265740-d6d8f45a17e7?w=400",
   },
   {
     id: 3,
     name: "Dheu Exclusive Designer Kurta Dhoti Set",
     price: "from Rs.2,250",
-    image: "/src/assets/sarees9.svg",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400",
   },
 ];
 
